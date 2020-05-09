@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Button from '@material-ui/core/Button'
 import Tile from './Tile'
 import Three from '../config/3x3.js'
 import Four from '../config/4x4.js'
@@ -119,6 +120,9 @@ class Board extends Component {
     render() {
         var isWin = this.state.isWin
         var tilesTable = this.state.tiles
+        var titleMessage = isWin ? 'Woho du äger' : 'Du suger'
+        var shuffleButton = isWin ? 'Starta om' : 'Shuffla'
+        var winInstructions = isWin ? 'Nu har du vunnit så alla knapparna är inaktiverade, du måste starta om!!!' : ''
         var yAxis = tilesTable.map(y => {
             const xAxis = y.map((tileNumber, idx) =>
                 <Tile key={idx} value={tileNumber} move={this.moveTile} />
@@ -133,23 +137,19 @@ class Board extends Component {
         })
         return (
             <div className={'board_wrapper'}>
-                <h1>
-                    {isWin ? 'Woho du äger' : 'Du suger'}
-                </h1>
-                <table className={'table is-fullwidth'}>
-                    <tbody className={'board'}>
+                <table className='table is-fullwidth'>
+                <div className='titleMessage'>
+                    {titleMessage}
+                </div>
+                    <tbody className='board'>
                         {yAxis}
+                        <div className="buttons">
+                    <Button variant="outlined" color="primary" onClick={this.shuffleTheBoard}>
+                            {shuffleButton}
+                    </Button>                  
+                </div>
+                        {winInstructions}
                     </tbody>
-                    <tfoot>
-                        <button onClick={this.shuffleTheBoard}>
-                            {isWin ? 'Starta om' : 'Shuffla'}
-                        </button>
-                        <br />
-                        {isWin ? 'Nu har du vunnit så alla knapparna är inaktiverade, du måste starta om!!!' : ''}
-                        <button onClick={this.cheater}>
-                            Fuska för du suger
-                        </button>
-                    </tfoot>
                 </table>
             </div>
         )
