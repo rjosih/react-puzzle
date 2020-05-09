@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100&family=Open+Sans:wght@300&display=swap');
+
+#root {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.board_wrapper {
+  overflow-x: auto;
+}
+
+.table {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.board {
+  align-self: center;
+}
+
+.tile {
+  font-size: 24px;
+  height: 75px;
+  width: 75px;
+  background-color: aqua;
+}
+
+
+
+
+
