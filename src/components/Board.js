@@ -1,9 +1,12 @@
 import React, { Component } from 'react'
 import Button from '@material-ui/core/Button'
+
+import InfoComponent from './InfoComponent'
 import Tile from './Tile'
 import Three from '../config/3x3.js'
 import Four from '../config/4x4.js'
 import SIZE from '../config/config.js'
+
 import './Board.css'
 
 const _ = require('underscore')
@@ -138,17 +141,19 @@ class Board extends Component {
         return (
             <div className={'board_wrapper'}>
                 <table className='table is-fullwidth'>
-                <div className='titleMessage'>
-                    {titleMessage}
-                </div>
+                    <div className='titleMessage'>
+                            {titleMessage}
+                    </div>
                     <tbody className='board'>
                         {yAxis}
                         <div className="buttons">
-                    <Button variant="outlined" color="primary" onClick={this.shuffleTheBoard}>
-                            {shuffleButton}
-                    </Button>                  
+                                <Button variant="outlined" color="primary" onClick={this.shuffleTheBoard}>
+                                        {shuffleButton}
+                                </Button>                  
+                                <InfoComponent />
                 </div>
-                        {winInstructions}
+                        {winInstructions}                    
+
                     </tbody>
                 </table>
             </div>

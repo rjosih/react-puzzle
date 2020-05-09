@@ -6,9 +6,7 @@ import InfoIcon from '@material-ui/icons/Info'
 function App() {
   return (
     <div className="App">
-      <h1>Hej det här är en pusselapp</h1>
-      <InfoIcon/>
-      hejhje
+      <h1>hjhwejhejw</h1>
       <Board  />
     </div>
   );

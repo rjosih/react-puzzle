@@ -1,0 +1,1 @@
+exports.explaination = 'The 15 Puzzle is a sliding puzzle that consists of a 4 by 4 frame of numbered square tiles in an arbitrary ordering with one space. The objective of the puzzle is to place the tiles in order, as shown in the figure below, by making sliding moves that use the empty space. To win the empty space has to be in the right corner'
