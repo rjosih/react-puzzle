@@ -47,8 +47,13 @@
   justify-content: center;
   flex-direction: column;
 }
+
 .infoComponent__help{
   cursor: pointer;
   float:right;
   padding-right: 30px;
+}
+
+.infoComponent__content{
+  font-family: 'Open Sans', sans-serif;
 }
