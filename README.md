@@ -22,14 +22,14 @@ to
 `size: 3`
 and it will automatically change the default mode to 3x3.
 ##### Future features
-Make a cheating algorithm or something. It's quite simple but I'm too lazy for now hehe.
+Make a cheating algorithm or something. It's quite simple but I'm too lazy for now hehe. More features: Refactor the redundancy that appear in the config and `Board` component. To make the code look more beautiful.
 
 ### Techniques
 The 15 Puzzle is a stateless and responsive application that works on the web, iPads, etc. 
 It's written in React and styled with common CSS and Material-UI.
 #### Choice of techniques
 React is a given answer since it's for creating rich and engaging web apps fast and efficiently with minimal coding.
-When it comes to Material-UI it styles React components fast and easy, simply makes the day a little better.
+When it comes to Material-UI it styles React components fast and easy, simply makes the day a little better. The reason why it was a mild mixture between different CSS was because from start my idea wasn't even styling a thing. 
 
 ### Structure
 The application is quite simple. Has few functions and what do they? 
