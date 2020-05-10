@@ -41,9 +41,9 @@ When it comes to Material-UI it styles React components fast and easy, simply ma
 The application is quite simple. Has few functions and what do they? 
 * Shuffles the board.
 * Checks if it's a win .
-* Finds tile position of clicked tile.
-* Finds the empty tile position when a tile is clicked.
-* Decides if the empty tile position and the clicked tile position are in range.
+* Finds position of clicked tile (with a number).
+* Finds the position of the empty tile when a tile (with a number) is clicked.
+* Decides if the position of the empty tile and the position of the clicked tile are in range.
 
  --> If yes, swap.
 
