@@ -8,24 +8,22 @@ import DialogContentText from '@material-ui/core/DialogContentText'
 import DialogTitle from '@material-ui/core/DialogTitle'
 import Button from '@material-ui/core/Button'
 
-import Text from '../config/explaination.js'
-
+import Data from '../../config/data.js'
 
 const InfoComponent = () => {
     const [open, setOpen] = useState(false)
-    const explaination = Text.explaination
 
     const handleInfo = () => {
-        setOpen(true);
+        setOpen(true)
     }
     
     const handleClose = () => {
-        setOpen(false);
+        setOpen(false)
     }
 
     return(
         <div className='infoComponent'> 
-            <Tooltip className='help' title='Help' onClick={handleInfo}>
+            <Tooltip className='infoComponent__help' title='Help' onClick={handleInfo}>
                 <LiveHelpIcon />
             </Tooltip>  
             {open ?
@@ -38,12 +36,12 @@ const InfoComponent = () => {
                 <DialogTitle id="responsive-dialog-title">{'Problem statement'}</DialogTitle>
                 <DialogContent >
                   <DialogContentText>
-                  {explaination}
+                  {Data.explaination}
                   </DialogContentText >
                 </DialogContent>
                 <DialogActions>
                 <Button onClick={handleClose} color="primary" autoFocus>
-                    Stäng
+                    {Data.close}
                   </Button>
                 </DialogActions>
               </Dialog>

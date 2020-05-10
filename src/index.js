@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Board from './components/Board';
+import Board from './Board';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(

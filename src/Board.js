@@ -1,17 +1,17 @@
 import React, { Component } from 'react'
 import Button from '@material-ui/core/Button'
 
-import InfoComponent from './InfoComponent'
-import Tile from './Tile'
-import Three from '../config/3x3.js'
-import Four from '../config/4x4.js'
-import SIZE from '../config/config.js'
+import InfoComponent from './components/InfoComponent/InfoComponent'
+import TileComponent from './components/TileComponent/TileComponent'
+import Three from './config/3x3.js'
+import Four from './config/4x4.js'
+import Data from './config/data.js'
 
 import './Board.css'
 
 const _ = require('underscore')
 
-var GAMESIZE = SIZE.SIZE
+var GAMESIZE = Data.size
 var tilesArray = Four.array
 
 if (GAMESIZE === 3) {
@@ -47,10 +47,6 @@ class Board extends Component {
             }
             this.setState(state)
         }
-    }
-
-    cheater = () => {
-
     }
 
     findPosition = (tileNumber, tilesTable) => {
@@ -123,12 +119,12 @@ class Board extends Component {
     render() {
         var isWin = this.state.isWin
         var tilesTable = this.state.tiles
-        var titleMessage = isWin ? 'Woho du äger' : 'Du suger'
-        var shuffleButton = isWin ? 'Starta om' : 'Shuffla'
-        var winInstructions = isWin ? 'Nu har du vunnit så alla knapparna är inaktiverade, du måste starta om!!!' : ''
+        var titleMessage = isWin ? Data.win : Data.loose
+        var shuffleButton = isWin ? Data.startOver : Data.shuffle
+        var winInstructions = isWin ? Data.instructions : ''
         var yAxis = tilesTable.map(y => {
             const xAxis = y.map((tileNumber, idx) =>
-                <Tile key={idx} value={tileNumber} move={this.moveTile} />
+                <TileComponent key={idx} value={tileNumber} move={this.moveTile} />
             )
             return (
                 <div>
@@ -139,21 +135,21 @@ class Board extends Component {
             )
         })
         return (
-            <div className={'board_wrapper'}>
+            <div className='board__wrapper'>
                 <table className='table is-fullwidth'>
-                    <div className='titleMessage'>
-                            {titleMessage}
+                    <h1 className='board__title'>{Data.title}</h1>
+                    <div className='board__title__message'>
+                        {titleMessage}
                     </div>
-                    <tbody className='board'>
+                    <tbody className='board__game'>
                         {yAxis}
-                        <div className="buttons">
-                                <Button variant="outlined" color="primary" onClick={this.shuffleTheBoard}>
-                                        {shuffleButton}
-                                </Button>                  
-                                <InfoComponent />
-                </div>
-                        {winInstructions}                    
-
+                        <div className="board__game__buttons">
+                            <Button variant="outlined" color="primary" onClick={this.shuffleTheBoard}>
+                                {shuffleButton}
+                            </Button>
+                            <InfoComponent />
+                        </div>
+                        {winInstructions}
                     </tbody>
                 </table>
             </div>
