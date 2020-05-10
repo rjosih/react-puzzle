@@ -121,7 +121,7 @@ class Board extends Component {
         var tilesTable = this.state.tiles
         var titleMessage = isWin ? Data.win : Data.loose
         var shuffleButton = isWin ? Data.startOver : Data.shuffle
-        var winInstructions = isWin ? Data.instructions : ''
+        var instructions = isWin ? Data.instructionsWin : Data.instructions
         var yAxis = tilesTable.map(y => {
             const xAxis = y.map((tileNumber, idx) =>
                 <TileComponent key={idx} value={tileNumber} move={this.moveTile} />
@@ -149,8 +149,10 @@ class Board extends Component {
                             </Button>
                             <InfoComponent />
                         </div>
-                        {winInstructions}
                     </tbody>
+                    <div className='board__instructions'>
+                        {instructions}
+                    </div>
                 </table>
             </div>
         )

@@ -29,6 +29,10 @@
   display: inline-flex;
 }
 
+.board__instructions{
+  text-align: center;
+}
+
 .tileComponent {
   font-size: 24px;
   height: 75px;
