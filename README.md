@@ -42,5 +42,7 @@ The application is quite simple. Has few functions and what do they?
 
 ### Run the application
 `npm i`
+
 `npm start`
+
 Application starts on [http://localhost:3000](http://localhost:3000) 
