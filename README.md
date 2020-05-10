@@ -22,7 +22,13 @@ to
 `size: 3`
 and it will automatically change the default mode to 3x3.
 ##### Future features
-Make a cheating algorithm or something. It's quite simple but I'm too lazy for now hehe. More features: Refactor the redundancy that appear in the config and `Board` component. To make the code look more beautiful.
+Make a cheating algorithm or something. It's quite simple but I'm too lazy for now hehe. More features: Refactor the 
+redundancy that appear in the config and `Board` component. To make the code look more beautiful. Anyhow, possible features:
+* Cheating.
+* Ranking.
+* Time counter.
+* Move counter. 
+* Saving into a database.
 
 ### Techniques
 The 15 Puzzle is a stateless and responsive application that works on the web, iPads, etc. 
