@@ -12,6 +12,7 @@ The objective of the puzzle is to place the tiles in order, as shown in the figu
 * The tiles order are randomly.
 * If you don't get the priniciple of the game there's a question mark to help you.
 * The shuffle button shuffles the tiles (obviously).
+* If you have sorted the number 1-15 + 0 you will be receiving winning messages.
 
 ### Config
 The application's default mode is 4x4 but you can change it in the config-file:
